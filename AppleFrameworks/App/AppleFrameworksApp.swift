@@ -1,10 +1,3 @@
-//
-//  AppleFrameworksApp.swift
-//  AppleFrameworks
-//
-//  Created by Anatoli on 09.02.2025.
-//
-
 import SwiftUI
 
 @main
