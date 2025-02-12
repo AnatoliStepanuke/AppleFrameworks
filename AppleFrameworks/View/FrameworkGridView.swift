@@ -7,9 +7,9 @@ struct FrameworkGridView: View {
     
     var body: some View {
         LazyVGrid(columns: columns) {
-            FrameworkTitleView(imageName: "app-clip", name: "App Clips")
-            FrameworkTitleView(imageName: "arkit", name: "ARKit")
-            FrameworkTitleView(imageName: "swiftui", name: "SwiftUI")
+            ForEach(MockData.frameworks) { framework in
+                FrameworkTitleView(framework: framework)
+            }
         }
     }
 }
@@ -20,15 +20,15 @@ struct FrameworkGridView: View {
 
 // MARK: - FramkeworkTitleView
 struct FrameworkTitleView: View {
-    let imageName: String
-    let name: String
+    
+    let framework: Framework
     
     var body: some View {
         VStack {
-            Image(imageName)
+            Image(framework.imageName)
                 .resizable()
                 .frame(width: 90, height: 90)
-            Text(name)
+            Text(framework.name)
                 .font(.title2)
                 .fontWeight(.semibold)
                 .scaledToFit()
