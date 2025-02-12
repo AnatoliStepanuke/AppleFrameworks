@@ -13,7 +13,7 @@ struct FrameworkGridView: View {
                         FrameworkTitleView(framework: framework)
                     }
                 }
-            }
+            }.navigationTitle("🍎 Frameworks")
         }
     }
 }
