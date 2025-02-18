@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct FrameworkGridView: View {
+
     let columns: [GridItem] = [GridItem(.flexible()),
                                GridItem(.flexible()),
                                GridItem(.flexible())]
@@ -38,5 +39,6 @@ struct FrameworkTitleView: View {
                 .scaledToFit()
                 .minimumScaleFactor(0.6)
         }
+        .padding()
     }
 }
