@@ -12,16 +12,13 @@ struct FrameworkDetailView: View {
     // MARK: - Body
     var body: some View {
         VStack {
-            
             DismissButton(isShowingDetailView: $isShowingDetailView)
             
             Spacer()
             
             FrameworkTitleView(framework: framework)
             
-            Text(framework.description)
-                .font(.body)
-                .padding()
+            FrameworkText(framework: framework)
             
             Spacer()
             
