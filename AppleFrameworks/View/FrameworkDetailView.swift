@@ -2,10 +2,14 @@ import SwiftUI
 
 struct FrameworkDetailView: View {
     
+    // MARK: - Variables
     var framework: Framework
+    
+    // MARK: - Properties
     @Binding var isShowingDetailView: Bool
     @State private var isShowingSafariView: Bool = false
     
+    // MARK: - Body
     var body: some View {
         VStack {
             HStack {
