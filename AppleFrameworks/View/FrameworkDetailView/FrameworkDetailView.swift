@@ -16,6 +16,8 @@ struct FrameworkDetailView: View {
             
             FrameworkTitleView(framework: framework)
             
+            Spacer()
+            
             FrameworkText(framework: framework)
             
             Spacer()
@@ -28,6 +30,8 @@ struct FrameworkDetailView: View {
             .sheet(isPresented: $isShowingSafariView, content: {
                 SafariView(url: URL(string: framework.urlString) ?? URL(string: "www.apple.com")!)
             })
+            
+            Spacer()
         }
     }
 }
