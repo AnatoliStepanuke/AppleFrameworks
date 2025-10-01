@@ -6,7 +6,6 @@ struct FrameworkDetailView: View {
     var framework: Framework
     
     // MARK: - Properties
-    @Binding var isShowingDetailView: Bool
     @State private var isShowingSafariView: Bool = false
     
     // MARK: - Body
@@ -37,6 +36,5 @@ struct FrameworkDetailView: View {
 }
 
 #Preview {
-    FrameworkDetailView(framework: MockData.sampleFramework,
-                        isShowingDetailView: .constant(false))
+    FrameworkDetailView(framework: MockData.sampleFramework)
 }

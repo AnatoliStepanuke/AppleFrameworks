@@ -11,7 +11,8 @@ struct FrameworkButton: View {
             .frame(width: 280, height: 50)
             .background(.red)
             .foregroundStyle(.white)
-            .clipShape(RoundedRectangle(cornerRadius: 10))    }
+            .clipShape(RoundedRectangle(cornerRadius: 10))
+    }
 }
 
 #Preview {

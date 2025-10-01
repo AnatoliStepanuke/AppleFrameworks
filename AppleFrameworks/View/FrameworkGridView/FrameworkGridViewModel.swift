@@ -6,12 +6,4 @@ final class FrameworkGridViewModel: ObservableObject {
     let columns: [GridItem] = [GridItem(.flexible()),
                                GridItem(.flexible()),
                                GridItem(.flexible())]
-    
-    // MARK: - Variables
-    var selectedFramework: Framework? {
-        didSet { isShowingDetailView = true }
-    }
-    
-    // MARK: - Properties
-    @Published var isShowingDetailView = false
 }
