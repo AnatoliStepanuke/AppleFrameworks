@@ -2,32 +2,29 @@ import SwiftUI
 
 struct FrameworkDetailView: View {
     
-    // MARK: - Variables
-    var framework: Framework
-    
     // MARK: - Properties
-    @State private var isShowingSafariView: Bool = false
+    @ObservedObject var viewModel: FrameworkDetailViewModel
     
     // MARK: - Body
     var body: some View {
         VStack {
             Spacer()
             
-            FrameworkTitleView(framework: framework)
+            FrameworkTitleView(framework: viewModel.framework)
             
             Spacer()
             
-            FrameworkText(framework: framework)
+            FrameworkText(framework: viewModel.framework)
             
             Spacer()
             
             Button {
-                isShowingSafariView = true
+                viewModel.isShowingSafariView = true
             } label: {
                 FrameworkButton(text: "Learn More")
             }
-            .sheet(isPresented: $isShowingSafariView, content: {
-                SafariView(url: URL(string: framework.urlString) ?? URL(string: "www.apple.com")!)
+            .sheet(isPresented: $viewModel.isShowingSafariView, content: {
+                SafariView(url: URL(string: viewModel.framework.urlString) ?? URL(string: "www.apple.com")!)
             })
             
             Spacer()
@@ -36,5 +33,5 @@ struct FrameworkDetailView: View {
 }
 
 #Preview {
-    FrameworkDetailView(framework: MockData.sampleFramework)
+    FrameworkDetailView(viewModel: FrameworkDetailViewModel(framework: MockData.sampleFramework))
 }
