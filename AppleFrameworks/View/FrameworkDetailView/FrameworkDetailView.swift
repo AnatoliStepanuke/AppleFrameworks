@@ -3,7 +3,7 @@ import SwiftUI
 struct FrameworkDetailView: View {
     
     // MARK: - Properties
-    @ObservedObject var viewModel: FrameworkDetailViewModel
+   @State var viewModel: FrameworkDetailViewModel
     
     // MARK: - Body
     var body: some View {

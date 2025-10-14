@@ -6,14 +6,15 @@
 //
 
 import SwiftUI
+import Observation
 
-final class FrameworkDetailViewModel: ObservableObject {
+@Observable final class FrameworkDetailViewModel {
     
     // MARK: Constants
     let framework: Framework
     
-    // MARK: Properties
-    @Published var isShowingSafariView: Bool = false
+    // MARK: Variables
+    var isShowingSafariView: Bool = false
     
     // MARK: Init
     init(framework: Framework) {

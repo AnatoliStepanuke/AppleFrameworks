@@ -3,7 +3,7 @@ import SwiftUI
 struct FrameworkGridView: View {
     
     // MARK: - Properties
-    @StateObject var viewModel = FrameworkGridViewModel()
+    @State var viewModel = FrameworkGridViewModel()
     
     // MARK: - Body
     var body: some View {

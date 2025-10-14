@@ -1,6 +1,7 @@
 import SwiftUI
+import Observation
 
-final class FrameworkGridViewModel: ObservableObject {
+@Observable final class FrameworkGridViewModel {
     
     // MARK: - Constants
     let columns: [GridItem] = [GridItem(.flexible()),
